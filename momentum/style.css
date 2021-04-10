@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  /* background-image: url('../momentum/assets/images/evening/01.jpg'); */
+  transition: background-image 1s ease-in-out;
+  color: #f1f1f1;
+  text-shadow: 1px 1px 8px rgba(20, 20, 20, 0.6);
+}
+
+.time {
+  font-size: 8rem;
+}
+
+.dateToday {
+  font-size: 1.5em;
+  margin-bottom: 2em;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  opacity: 0.8;
+}
+
+.btn {
+  width: 5vw;
+  height: 5vw;
+  border: 0;
+  background: url(../momentum/assets/icons/gallery.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: grayscale(0.7);
+  position: fixed;
+  bottom: 2.5vw;
+  right: 2.5vw;
+}
+
+.btnQuote {
+  width: 4vw;
+  height: 4vw;
+  border: 0;
+  background: url(../momentum/assets/icons/quote.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: grayscale(0.7);
+  position: fixed;
+  bottom: 2.5vw;
+  left: 2.5vw;
+  border-radius: 0.5vw;
+}
+
+.quote {
+  position: fixed;
+  font-size: .8rem;
+  background-color: rgba(238, 238, 238, 0.2);
+  max-width: 80vw;
+  border-radius: 1em;
+  bottom: 2.5vw;
+}
+
+.quote figcaption,
+.quote blockquote {
+  margin: 1em;
+}
+
+.quote figcaption {
+  text-align: right;
+}
+
+.btn:hover,
+.btnQuote:hover {
+  filter: none;
+}
+
+.btn:active,
+.btn:focus,
+.btnQuote:focus,
+.btnQuote:active {
+  outline: 0;
+}
+
+.btn:active,
+.btnQuote:active {
+  transform: scale(1.02);
+}
+
+.weather-block {
+  position: fixed;
+  top: 2.5vw;
+  right: 2.5vw;
+}
+
+.weather-icon {
+  font-size: 60px;
+  color: #44aadd;
+}
+
+@media (max-width: 700px) {
+  .time {
+    font-size: 6rem;
+  }
+
+  .dateToday {
+    font-size: 1.5em;
+  }
+
+  .weather-icon {
+    font-size: 40px;
+  }
+
+  .city,
+  .temperature,
+  .humidity,
+  .windspeed,
+  .weather-description {
+    font-size: 0.7em;
+  }
+
+  h2 {
+    font-size: 1em;
+  }
+
+  .greeting,
+  .name {
+    font-size: 1em;
+  }
+
+  .quote {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 510px) {
+  .time {
+    font-size: 3rem;
+  }
+
+  .dateToday {
+    font-size: .8em;
+  }
+
+  .weather-icon {
+    font-size: 33px;
+  }
+
+  .city,
+  .temperature,
+  .humidity,
+  .windspeed,
+  .weather-description {
+    font-size: 0.6em;
+  }
+
+  h2 {
+    font-size: .8em;
+  }
+
+  .greeting,
+  .name {
+    font-size: .8em;
+  }
+
+  .quote {
+    font-size: 0.6em;
+  }
+
+}
