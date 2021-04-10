@@ -1,0 +1,146 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.use-keyboard-input {
+  display: block;
+  width: 90%;
+  margin: 30px auto;
+  padding: 10px;
+  font-size: 20px;
+  height: calc(100vh - 380px);
+  min-height: 300px;
+}
+
+.kb-btn.wide.show {
+  width: 84vw;
+}
+
+.kb-btn.wide {
+  width: 8.5vw;
+}
+
+.kb-btn.wide.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1vw;
+  right: 1vw;
+  width: 7px;
+  height: 7px;
+  background-color: springgreen;
+}
+
+.kb-btn.wide.language-ru::after {
+  content: "ru";
+  display: block;
+  position: absolute;
+  font-size: large;
+  color: rgb(0, 34, 14);
+  top: 0.1vw;
+  right: 0.1vw;
+  background-color: springgreen;
+}
+
+.kb-btn.wide.language-en::after {
+  content: "en";
+  display: block;
+  position: absolute;
+  font-size: large;
+  color: rgb(0, 34, 14);
+  top: 0.1vw;
+  right: 0.1vw;
+  background-color: springgreen;
+}
+
+.kb-btn {
+  position: relative;
+  width: 5vw;
+  height: 5vw;
+  margin: 0.2vw;
+  background-color: rgb(114, 182, 187);
+  font-size: 1.5vw;
+}
+
+.kb-btn:active,
+.keyDown {
+  transform: translateY(1px);
+  filter: saturate(150%);
+  background-color: teal;
+}
+
+.kb-btn.extra-wide {
+  width: 55.5vw;
+}
+
+textarea {
+  display: flex;
+  align-self: center;
+  font-size: 20px;
+  height: 14vw;
+  width: 75vw;
+  margin-bottom: 2vw;
+}
+
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  width: 68vw;
+  height: auto;
+  border: 5px solid blueviolet;
+  background-color: wheat;
+  top: 25vh;
+  transition: top 1s;
+  justify-content: center;
+}
+
+.hidden {
+  position: absolute;
+  top: 92vh;
+}
+
+.volume_on {
+  position: absolute;
+  width: 6vw;
+  height: 6vw;
+  background-color: darkturquoise;
+  top: 3vw;
+  right: 3vw;
+}
+
+.volume_on::after {
+  content: "ON";
+  display: block;
+  position: absolute;
+  font-size: large;
+  color: rgb(0, 34, 14);
+  top: 0.1vw;
+  right: 0.1vw;
+  background-color: rgb(255, 0, 234);
+  font-size: 1.5vw;
+}
+
+.volume_off {
+  position: absolute;
+  width: 6vw;
+  height: 6vw;
+  background-color: rgb(209, 0, 199);
+  top: 3vw;
+  right: 3vw;
+}
+
+.volume_off::after {
+  content: "OFF";
+  display: block;
+  position: absolute;
+  font-size: large;
+  color: rgb(0, 34, 14);
+  top: 0.1vw;
+  right: 0.1vw;
+  background-color: darkturquoise;
+  font-size: 1.5vw;
+}
