@@ -1,0 +1,1 @@
+The goal is to create a simulator game for learning css selectors. The simulator consists of several game levels. Each level includes a sample layout and html code that corresponds to the current level. Some elements of the layout are highlighted using animation. The user's task is to write a css selector that corresponds to all the selected layout elements.

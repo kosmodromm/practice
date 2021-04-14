@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    background: rgb(17, 255, 176);
+    border-radius: 5px 0 0 5px !important;
+    margin-bottom: 1px;
+}
+
+.btn.selected {
+    background-color: white;
+    border: solid rgb(17, 255, 176);
+    border-width: 3px 0 3px 3px;
+    border-radius: 5px 0 0 5px !important;
+}
+
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.tab-content {
+    width: 800px;
+    padding: 10px;
+    border-width: 3px 0 3px 3px;
+    border: solid rgb(17, 255, 176);
+    border-radius: 0 10px 10px 10px;
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}

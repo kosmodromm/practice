@@ -1,0 +1,44 @@
+.container {
+    height: 10000px;
+    background: linear-gradient(45deg, #EECFBA, #C5DDE8, #c8e8c5, #C5DDE8);
+    padding: 0;
+}
+
+.scroll-to-top {
+    position: sticky;
+    top: 90%;
+    left: 69%;
+    background: none;
+    transition: top .5s;
+    z-index: 1;
+}
+
+.rocket {
+    width: 100px;
+    transition: opacity 1.2s;
+}
+
+.btn {
+    border: none;
+}
+
+.btn:focus {
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+
+.progress-container {
+    position: sticky;
+    top: 0;
+    height: 20px;
+    width: 100%;
+    background: rgb(240, 240, 240);
+    z-index: 1;
+}
+
+.progress-bar {
+    height: 20px;
+    width: 0%;
+    background: rgb(169, 116, 219);
+}

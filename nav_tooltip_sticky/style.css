@@ -1,0 +1,134 @@
+body {
+    background: rgba(255, 115, 0, 0.096);
+    transition: background-color .5s;
+}
+.wrapper {
+    position: absolute;
+    width: 100%;
+    height: 10000px;
+    background: rgba(0,0,0,0.4);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
+    overflow: hidden;
+    transition: visibility 0.3s linear, opacity 0.3s linear;
+}
+
+.jumbotron {
+    margin-bottom: 0;
+}
+
+.card {
+    background: rgba(255, 136, 0, 0.5);
+    z-index: 0;
+}
+
+.nav-link {
+    background: none;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.nav-link:active, .nav-link:focus {
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+
+.navbar-brand {
+    padding-top: 0;
+}
+
+#tooltip {
+    margin: 20px;
+    width: fit-content;
+    position: relative;
+    border-bottom: 1px dotted black;
+    align-self: center;
+    cursor: pointer;
+}
+
+#tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    background-color: rgb(162, 226, 194);
+    color: rgb(20, 20, 20);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+#tooltip .tooltiptext::after { /* todo молодец что делал уголок не через картинку */
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(162, 226, 194) transparent transparent transparent;
+}
+
+#tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s; 
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color:rgb(162, 226, 194);
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#main {
+    height: 10000px;
+    transition: margin-left .5s;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

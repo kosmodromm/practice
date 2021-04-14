@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>COVID-19 Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <h1>RSS COVID - 19 Dashboard</h1>
+    </header>
+    <div class="body-wrapper">
+        <div class="countries">
+            <input type="search" placeholder="Select country">
+            <ul class="countries-list" data-name="list-all-time">
+            </ul>
+            <ul class="countries-list hidden" data-name="list-last-day">
+            </ul>
+            <div class="form_radio_group">
+                <div class="form_radio_group-item">
+                    <input id="radio-1" type="radio" name="radio" value="list-last-day">
+                    <label for="radio-1">Last day</label>
+                </div>
+                <div class="form_radio_group-item">
+                    <input id="radio-2" type="radio" name="radio" value="list-all-time" checked>
+                    <label for="radio-2">All time</label>
+                </div>
+            </div>
+        </div>
+        <div class="info-wrapper">
+            <div>
+                <h2 class="actual-update">actual-update Date Time</h2>
+            </div>
+            <div class="stats-places">
+                <h1 class="stats-country"></h1>
+                <div class="stats-cases"></div>
+                <div class="stats-deaths"></div>
+                <div class="stats-recovered"></div>
+            </div>
+            <div class="table-btns">
+                <div class="period">
+                    <button data-period="all-time" class="active">All time</button>
+                    <button data-period="last-day">Last day</button>
+                </div>
+                <div class="population">
+                    <button data-population="total">Total</button>
+                    <button data-population="per-100k">per 100k</button>
+                </div>
+
+            </div>
+            <div class="stats-wrapper">
+                <div class="stats">
+                    <div id="map-chart" class="map">MAP</div>
+                    <div class="map-btns">
+                        <button data-param="cases" class="active">Cases</button>
+                        <button data-param="deaths">Deaths</button>
+                        <button data-param="recovered">Recovered</button>
+                    </div>
+                    <div id="graph">GRAPH</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <a href="https://github.com/kosmodromm"><img
+                src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png" alt="Github link"></a>
+        <div>2020</div>
+        <div><a href="https://rs.school/js/"><img src="https://rs.school/images/rs_school_js.svg" alt="RSS"></a>
+        </div>
+    </footer>
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+    <script src="https://code.highcharts.com/mapdata/custom/world-highres.js"></script>
+
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>
